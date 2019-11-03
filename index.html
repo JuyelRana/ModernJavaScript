@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScripts Fundamentals</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <section class="content">
+
+    <div class="header">
+      <h2>
+        <script>
+          document.write("Modern JavaScripts");
+        </script>
+      </h2>
+    </div>
+
+    <div class="maincontent">
+
+      <div id="show">
+
+        <input type="text" name="first_number" oninput="add()" id="first_number">
+        <input type="text" name="second_number" oninput="add()" id="second_number">
+        <input type="text" name="third_number" oninput="add()" id="third_number">
+
+        <h3>Summation: </h3>
+        <p id="summation"></p>
+
+      </div>
+
+      <script>
+        function add() {
+          var first_number = document.getElementById('first_number').value
+          var second_number = document.getElementById('second_number').value
+          var result = parseInt(first_number) + parseInt(second_number)
+
+          document.getElementById('summation').innerHTML = result;
+
+          document.getElementById('third_number').value = result
+
+        }
+      </script>
+    </div>
+
+    <div class="footer">
+      <h2>Dream Factory Projects</h2>
+    </div>
+
+  </section>
+</body>
+
+</html>
