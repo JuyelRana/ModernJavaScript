@@ -1,55 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet" />
+    <title>JavaScript DOM Tutorials</title>
+  </head>
+  <body>
+  	<div id="wrapper">
+	    <header>
+	    	<div id="page-banner">
+	    		<h1 class="title">Bookorama</h1>
+          <p>Books for Ninjas</p>
+          <form id="search-books">
+            <input type="text" placeholder="Search books..." />
+          </form>
+	    	</div>
+	    </header>
+	    <div id="book-list">
+	    	<h2 class="title">Books to Read</h2>
+	    	<ul>
+	    		<li>
+	    			<span class="name">Name of the Wind</span>
+	    			<span class="delete">delete</span>
+	    		</li>
+	    		<li>
+	    			<span class="name">The Wise Man's Fear</span>
+	    			<span class="delete">delete</span>
+	    		</li>
+	    		<li>
+	    			<span class="name">Kafka on the Shore</span>
+	    			<span class="delete">delete</span>
+	    		</li>
+	    		<li>
+	    			<span class="name">The Master and the Margarita</span>
+	    			<span class="delete">delete</span>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <form id="add-book">
+	    	<input type="text" placeholder="Add a book..." />
+	    	<button>Add</button>
+	    </form>
 
-<head>
-  <meta charset="utf-8">
-  <title>JavaScripts Fundamentals</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-
-<body>
-  <section class="content">
-
-    <div class="header">
-      <h2>
-        <script>
-          document.write("Modern JavaScripts");
-        </script>
-      </h2>
     </div>
-
-    <div class="maincontent">
-
-      <div id="show">
-
-        <input type="text" name="first_number" oninput="add()" id="first_number">
-        <input type="text" name="second_number" oninput="add()" id="second_number">
-        <input type="text" name="third_number" oninput="add()" id="third_number">
-
-        <h3>Summation: </h3>
-        <p id="summation"></p>
-
-      </div>
-
-      <script>
-        function add() {
-          var first_number = document.getElementById('first_number').value
-          var second_number = document.getElementById('second_number').value
-          var result = parseInt(first_number) + parseInt(second_number)
-
-          document.getElementById('summation').innerHTML = result;
-
-          document.getElementById('third_number').value = result
-
-        }
-      </script>
-    </div>
-
-    <div class="footer">
-      <h2>Dream Factory Projects</h2>
-    </div>
-
-  </section>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
