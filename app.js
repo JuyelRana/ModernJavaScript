@@ -1,26 +1,9 @@
-const wmf = 
-document.querySelector('#book-list li:nth-child(2) .name');
+const banner = document.querySelector('#page-banner');
 
-// console.log(wmf);
+console.log('#page-banner node type is: ', banner.nodeType);
+console.log('#page-banner node name is: ', banner.nodeName);
+console.log('#page-banner haschild nodes: ', banner.hasChildNodes());
 
-var books = document.querySelector('#book-list li .name');
-// console.log(books);
+const clonedBanner = banner.cloneNode(true);
 
-books = document.querySelectorAll('#book-list li .name');
-
-// console.log(books);
-
-Array.from(books).forEach(function(book){
-  // console.log(book.textContent);
-
-  book.textContent += ' (book title)';
-  
-})
-
-const bookList = document.querySelector('#book-list');
-
-// console.log(bookList.innerHTML);
-
-bookList.innerHTML = '<h2> Books and more books</h2>';
-
-bookList.innerHTML += '<p> This is how you add HTML </p>';
+console.log(clonedBanner);
